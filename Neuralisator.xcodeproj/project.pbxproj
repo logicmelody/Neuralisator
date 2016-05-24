@@ -14,6 +14,10 @@
 		B9EC529C1CE2B61700BBD7BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9EC529A1CE2B61700BBD7BB /* LaunchScreen.storyboard */; };
 		B9EC52A71CE2B61700BBD7BB /* NeuralisatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EC52A61CE2B61700BBD7BB /* NeuralisatorTests.swift */; };
 		B9EC52B21CE2B61700BBD7BB /* NeuralisatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EC52B11CE2B61700BBD7BB /* NeuralisatorUITests.swift */; };
+		B9EC52CB1CE3991800BBD7BB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EC52CA1CE3991800BBD7BB /* AVFoundation.framework */; };
+		B9EC52CD1CE40DBA00BBD7BB /* ErasingMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EC52CC1CE40DBA00BBD7BB /* ErasingMemoryViewController.swift */; };
+		B9EC52D31CE4968200BBD7BB /* Back_of_a_Neuralyzer.png in Resources */ = {isa = PBXBuildFile; fileRef = B9EC52D21CE4968200BBD7BB /* Back_of_a_Neuralyzer.png */; };
+		B9EC52D51CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9EC52D41CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		B9EC52AD1CE2B61700BBD7BB /* NeuralisatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeuralisatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EC52B11CE2B61700BBD7BB /* NeuralisatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuralisatorUITests.swift; sourceTree = "<group>"; };
 		B9EC52B31CE2B61700BBD7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9EC52CA1CE3991800BBD7BB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B9EC52CC1CE40DBA00BBD7BB /* ErasingMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErasingMemoryViewController.swift; sourceTree = "<group>"; };
+		B9EC52D21CE4968200BBD7BB /* Back_of_a_Neuralyzer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back_of_a_Neuralyzer.png; sourceTree = "<group>"; };
+		B9EC52D41CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mib_neuralyzer.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EC52CB1CE3991800BBD7BB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +86,7 @@
 		B9EC52851CE2B61700BBD7BB = {
 			isa = PBXGroup;
 			children = (
+				B9EC52CA1CE3991800BBD7BB /* AVFoundation.framework */,
 				B9EC52901CE2B61700BBD7BB /* Neuralisator */,
 				B9EC52A51CE2B61700BBD7BB /* NeuralisatorTests */,
 				B9EC52B01CE2B61700BBD7BB /* NeuralisatorUITests */,
@@ -97,11 +107,10 @@
 		B9EC52901CE2B61700BBD7BB /* Neuralisator */ = {
 			isa = PBXGroup;
 			children = (
-				B9EC52911CE2B61700BBD7BB /* AppDelegate.swift */,
-				B9EC52931CE2B61700BBD7BB /* ViewController.swift */,
-				B9EC52951CE2B61700BBD7BB /* Main.storyboard */,
+				B9EC52C01CE2B83000BBD7BB /* UI */,
+				B9EC52C71CE2C21100BBD7BB /* ViewController */,
+				B9EC52BF1CE2B81900BBD7BB /* Resource */,
 				B9EC52981CE2B61700BBD7BB /* Assets.xcassets */,
-				B9EC529A1CE2B61700BBD7BB /* LaunchScreen.storyboard */,
 				B9EC529D1CE2B61700BBD7BB /* Info.plist */,
 			);
 			path = Neuralisator;
@@ -123,6 +132,34 @@
 				B9EC52B31CE2B61700BBD7BB /* Info.plist */,
 			);
 			path = NeuralisatorUITests;
+			sourceTree = "<group>";
+		};
+		B9EC52BF1CE2B81900BBD7BB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B9EC52D41CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 */,
+				B9EC52D21CE4968200BBD7BB /* Back_of_a_Neuralyzer.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		B9EC52C01CE2B83000BBD7BB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B9EC52951CE2B61700BBD7BB /* Main.storyboard */,
+				B9EC529A1CE2B61700BBD7BB /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		B9EC52C71CE2C21100BBD7BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B9EC52931CE2B61700BBD7BB /* ViewController.swift */,
+				B9EC52CC1CE40DBA00BBD7BB /* ErasingMemoryViewController.swift */,
+				B9EC52911CE2B61700BBD7BB /* AppDelegate.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +269,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EC52D31CE4968200BBD7BB /* Back_of_a_Neuralyzer.png in Resources */,
 				B9EC529C1CE2B61700BBD7BB /* LaunchScreen.storyboard in Resources */,
 				B9EC52991CE2B61700BBD7BB /* Assets.xcassets in Resources */,
 				B9EC52971CE2B61700BBD7BB /* Main.storyboard in Resources */,
+				B9EC52D51CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EC52CD1CE40DBA00BBD7BB /* ErasingMemoryViewController.swift in Sources */,
 				B9EC52941CE2B61700BBD7BB /* ViewController.swift in Sources */,
 				B9EC52921CE2B61700BBD7BB /* AppDelegate.swift in Sources */,
 			);
@@ -487,6 +527,7 @@
 				B9EC52B81CE2B61700BBD7BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9EC52B91CE2B61700BBD7BB /* Build configuration list for PBXNativeTarget "NeuralisatorTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +536,7 @@
 				B9EC52BB1CE2B61700BBD7BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9EC52BC1CE2B61700BBD7BB /* Build configuration list for PBXNativeTarget "NeuralisatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +545,7 @@
 				B9EC52BE1CE2B61700BBD7BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

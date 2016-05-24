@@ -8,11 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    @IBOutlet weak var neuralisator: UIImageView!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        initialize()
+    }
+
+    func initialize() {
+        setupNeuralisator()
+    }
+
+    func setupNeuralisator() {
+        neuralisator.userInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.eraseMemory))
+        tapGestureRecognizer.delegate = self
+
+        neuralisator.addGestureRecognizer(tapGestureRecognizer)
+    }
+
+    func eraseMemory() {
+        performSegueWithIdentifier("eraseMemory", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +39,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
 

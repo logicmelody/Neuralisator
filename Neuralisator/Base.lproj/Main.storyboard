@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Neuralisator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,86 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back_of_a_Neuralyzer.png" translatesAutoresizingMaskIntoConstraints="NO" id="QZi-sV-DdI">
+                                <rect key="frame" x="242.5" y="0.0" width="115" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QZi-sV-DdI" secondAttribute="height" multiplier="23:120" id="fXL-W0-k3D"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QZi-sV-DdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4L2-x8-kXn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QZi-sV-DdI" secondAttribute="bottom" id="8wL-c9-u6o"/>
+                            <constraint firstItem="QZi-sV-DdI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="dB3-MO-ZaF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="neuralisator" destination="QZi-sV-DdI" id="QrA-J4-OSN"/>
+                        <segue destination="u8D-vr-0P0" kind="presentation" identifier="eraseMemory" modalTransitionStyle="crossDissolve" id="VRc-ke-hwn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-297" y="315"/>
+        </scene>
+        <!--Erasing Memory View Controller-->
+        <scene sceneID="NgY-dL-nwn">
+            <objects>
+                <viewController id="u8D-vr-0P0" customClass="ErasingMemoryViewController" customModule="Neuralisator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oed-Ea-w8e"/>
+                        <viewControllerLayoutGuide type="bottom" id="XUg-WS-pPv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kzv-FX-XAM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAL-LP-WsX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7u-QW-qDC">
+                                        <rect key="frame" x="139" y="528" width="322" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="322" id="CFa-1h-i0o"/>
+                                            <constraint firstAttribute="height" constant="64" id="Zyi-U5-kjN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="You didn't see any flash ">
+                                            <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="neuralisator" modalTransitionStyle="flipHorizontal" id="koY-d2-Msu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="c7u-QW-qDC" firstAttribute="centerX" secondItem="xAL-LP-WsX" secondAttribute="centerX" id="QZV-y4-CPC"/>
+                                    <constraint firstAttribute="bottom" secondItem="c7u-QW-qDC" secondAttribute="bottom" constant="8" id="kz7-ot-Kdj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xAL-LP-WsX" firstAttribute="leading" secondItem="Kzv-FX-XAM" secondAttribute="leadingMargin" constant="-20" id="1dk-pN-KXK"/>
+                            <constraint firstItem="xAL-LP-WsX" firstAttribute="top" secondItem="Kzv-FX-XAM" secondAttribute="topMargin" id="GGc-yQ-foT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xAL-LP-WsX" secondAttribute="trailing" constant="-20" id="mZ7-tW-3gy"/>
+                            <constraint firstItem="XUg-WS-pPv" firstAttribute="top" secondItem="xAL-LP-WsX" secondAttribute="bottom" id="wDK-f4-xSF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="livePreview" destination="xAL-LP-WsX" id="2r9-Oy-MkU"/>
+                        <outlet property="restoreButton" destination="c7u-QW-qDC" id="wtl-FU-i7B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ZC-fg-O3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="324"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Back_of_a_Neuralyzer.png" width="635" height="907"/>
+    </resources>
 </document>
