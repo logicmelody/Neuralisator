@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back_of_a_Neuralyzer.png" translatesAutoresizingMaskIntoConstraints="NO" id="QZi-sV-DdI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_neuralyzer.png" translatesAutoresizingMaskIntoConstraints="NO" id="QZi-sV-DdI">
                                 <rect key="frame" x="242.5" y="0.0" width="115" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QZi-sV-DdI" secondAttribute="height" multiplier="23:120" id="fXL-W0-k3D"/>
@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-297" y="315"/>
+            <point key="canvasLocation" x="-368" y="166"/>
         </scene>
         <!--Erasing Memory View Controller-->
         <scene sceneID="NgY-dL-nwn">
@@ -98,6 +98,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back_of_a_Neuralyzer.png" width="635" height="907"/>
+        <image name="ic_neuralyzer.png" width="1000" height="1429"/>
     </resources>
 </document>

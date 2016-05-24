@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B92023E61CF43A8B00328CCD /* ic_neuralyzer.png in Resources */ = {isa = PBXBuildFile; fileRef = B92023E51CF43A8B00328CCD /* ic_neuralyzer.png */; };
 		B9EC52921CE2B61700BBD7BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EC52911CE2B61700BBD7BB /* AppDelegate.swift */; };
 		B9EC52941CE2B61700BBD7BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EC52931CE2B61700BBD7BB /* ViewController.swift */; };
 		B9EC52971CE2B61700BBD7BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9EC52951CE2B61700BBD7BB /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		B9EC52B21CE2B61700BBD7BB /* NeuralisatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EC52B11CE2B61700BBD7BB /* NeuralisatorUITests.swift */; };
 		B9EC52CB1CE3991800BBD7BB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EC52CA1CE3991800BBD7BB /* AVFoundation.framework */; };
 		B9EC52CD1CE40DBA00BBD7BB /* ErasingMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EC52CC1CE40DBA00BBD7BB /* ErasingMemoryViewController.swift */; };
-		B9EC52D31CE4968200BBD7BB /* Back_of_a_Neuralyzer.png in Resources */ = {isa = PBXBuildFile; fileRef = B9EC52D21CE4968200BBD7BB /* Back_of_a_Neuralyzer.png */; };
 		B9EC52D51CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9EC52D41CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B92023E51CF43A8B00328CCD /* ic_neuralyzer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_neuralyzer.png; sourceTree = "<group>"; };
 		B9EC528E1CE2B61700BBD7BB /* Neuralisator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neuralisator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EC52911CE2B61700BBD7BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9EC52931CE2B61700BBD7BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		B9EC52B31CE2B61700BBD7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9EC52CA1CE3991800BBD7BB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B9EC52CC1CE40DBA00BBD7BB /* ErasingMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErasingMemoryViewController.swift; sourceTree = "<group>"; };
-		B9EC52D21CE4968200BBD7BB /* Back_of_a_Neuralyzer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back_of_a_Neuralyzer.png; sourceTree = "<group>"; };
 		B9EC52D41CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mib_neuralyzer.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,8 +137,8 @@
 		B9EC52BF1CE2B81900BBD7BB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B92023E51CF43A8B00328CCD /* ic_neuralyzer.png */,
 				B9EC52D41CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 */,
-				B9EC52D21CE4968200BBD7BB /* Back_of_a_Neuralyzer.png */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -269,11 +269,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EC52D31CE4968200BBD7BB /* Back_of_a_Neuralyzer.png in Resources */,
 				B9EC529C1CE2B61700BBD7BB /* LaunchScreen.storyboard in Resources */,
 				B9EC52991CE2B61700BBD7BB /* Assets.xcassets in Resources */,
 				B9EC52971CE2B61700BBD7BB /* Main.storyboard in Resources */,
 				B9EC52D51CE5BCBD00BBD7BB /* mib_neuralyzer.mp3 in Resources */,
+				B92023E61CF43A8B00328CCD /* ic_neuralyzer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
