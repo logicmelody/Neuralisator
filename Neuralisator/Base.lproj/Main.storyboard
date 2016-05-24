@@ -57,14 +57,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAL-LP-WsX">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7u-QW-qDC">
-                                        <rect key="frame" x="139" y="528" width="322" height="64"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7u-QW-qDC">
+                                        <rect key="frame" x="153" y="548" width="294" height="33"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="322" id="CFa-1h-i0o"/>
-                                            <constraint firstAttribute="height" constant="64" id="Zyi-U5-kjN"/>
+                                            <constraint firstAttribute="height" constant="33" id="Nfn-EU-kDf"/>
+                                            <constraint firstAttribute="width" constant="294" id="tip-vV-aD9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="You didn't see any flash ">
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="You didn't see any flash " image="ic_back">
                                             <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -74,8 +75,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="c7u-QW-qDC" firstAttribute="centerX" secondItem="xAL-LP-WsX" secondAttribute="centerX" id="QZV-y4-CPC"/>
-                                    <constraint firstAttribute="bottom" secondItem="c7u-QW-qDC" secondAttribute="bottom" constant="8" id="kz7-ot-Kdj"/>
+                                    <constraint firstAttribute="bottom" secondItem="c7u-QW-qDC" secondAttribute="bottom" constant="19" id="3tq-3f-sKP"/>
+                                    <constraint firstItem="c7u-QW-qDC" firstAttribute="centerX" secondItem="xAL-LP-WsX" secondAttribute="centerX" id="oho-eQ-xTK"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -94,10 +95,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZC-fg-O3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="324"/>
+            <point key="canvasLocation" x="343" y="166"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_back" width="33" height="33"/>
         <image name="ic_neuralyzer.png" width="1000" height="1429"/>
     </resources>
 </document>
