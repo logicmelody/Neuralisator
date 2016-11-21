@@ -23,7 +23,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     func setupNeuralisator() {
-        neuralisator.userInteractionEnabled = true
+        neuralisator.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.eraseMemory))
         tapGestureRecognizer.delegate = self
 
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     func eraseMemory() {
-        performSegueWithIdentifier("eraseMemory", sender: nil)
+        performSegue(withIdentifier: "eraseMemory", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +39,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 }

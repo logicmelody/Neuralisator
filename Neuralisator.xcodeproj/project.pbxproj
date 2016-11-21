@@ -231,15 +231,18 @@
 					B9EC528D1CE2B61700BBD7BB = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = NEMDJ65476;
+						LastSwiftMigration = 0810;
 					};
 					B9EC52A11CE2B61700BBD7BB = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = NEMDJ65476;
+						LastSwiftMigration = 0810;
 						TestTargetID = B9EC528D1CE2B61700BBD7BB;
 					};
 					B9EC52AC1CE2B61700BBD7BB = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = NEMDJ65476;
+						LastSwiftMigration = 0810;
 						TestTargetID = B9EC528D1CE2B61700BBD7BB;
 					};
 				};
@@ -448,6 +451,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dl.Neuralisator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -459,6 +463,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dl.Neuralisator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -470,6 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dl.NeuralisatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neuralisator.app/Neuralisator";
 			};
 			name = Debug;
@@ -482,6 +488,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dl.NeuralisatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neuralisator.app/Neuralisator";
 			};
 			name = Release;
@@ -493,6 +500,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dl.NeuralisatorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Neuralisator;
 			};
 			name = Debug;
@@ -504,6 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dl.NeuralisatorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Neuralisator;
 			};
 			name = Release;

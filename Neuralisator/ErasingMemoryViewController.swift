@@ -14,14 +14,14 @@ class ErasingMemoryViewController: UIViewController {
     @IBOutlet weak var restoreButton: UIButton!
     @IBOutlet weak var livePreview: UIView!
 
-    var backCamera = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-    var timer = NSTimer()
+    var backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+    var timer = Timer()
 
     var captureSession: AVCaptureSession?
     var stillImageOutput: AVCaptureStillImageOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
 
-    var neuralyzerSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("mib_neuralyzer", ofType: "mp3")!)
+    var neuralyzerSound = URL(fileURLWithPath: Bundle.main.path(forResource: "mib_neuralyzer", ofType: "mp3")!)
     var audioPlayer = AVAudioPlayer()
 
 
@@ -33,7 +33,7 @@ class ErasingMemoryViewController: UIViewController {
     }
 
     func initialize() {
-        restoreButton.hidden = true
+        restoreButton.isHidden = true
 
         setupLivePreview()
         setupSounds()
@@ -60,7 +60,7 @@ class ErasingMemoryViewController: UIViewController {
                     // Live preview
                     previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
                     previewLayer!.videoGravity = AVLayerVideoGravityResize
-                    previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
+                    previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
                     livePreview.layer.addSublayer(previewLayer!)
 
                     captureSession!.startRunning()
@@ -75,7 +75,7 @@ class ErasingMemoryViewController: UIViewController {
 
     func setupSounds() {
         do {
-            try audioPlayer = AVAudioPlayer(contentsOfURL: neuralyzerSound)
+            try audioPlayer = AVAudioPlayer(contentsOf: neuralyzerSound)
             audioPlayer.prepareToPlay()
 
         } catch {
@@ -83,12 +83,12 @@ class ErasingMemoryViewController: UIViewController {
         }
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //print("viewWillAppear")
 
         setupCamera()
-        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ErasingMemoryViewController.eraseMemory), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ErasingMemoryViewController.eraseMemory), userInfo: nil, repeats: false)
     }
 
     func setupCamera() {
@@ -100,46 +100,46 @@ class ErasingMemoryViewController: UIViewController {
     func setAutoFocus() {
         do {
             // lock your device for configuration
-            try backCamera.lockForConfiguration()
-            backCamera.focusMode = AVCaptureFocusMode.AutoFocus
+            try backCamera?.lockForConfiguration()
+            backCamera?.focusMode = AVCaptureFocusMode.autoFocus
 
         } catch {
             print("Error in lockForConfiguration()")
         }
 
-        backCamera.unlockForConfiguration()
+        backCamera?.unlockForConfiguration()
     }
 
-    func setFlashOn(isFlashOn: Bool) {
-        if !backCamera.hasFlash {
+    func setFlashOn(_ isFlashOn: Bool) {
+        if !(backCamera?.hasFlash)! {
             return
         }
 
         do {
             // lock your device for configuration
-            try backCamera.lockForConfiguration()
+            try backCamera?.lockForConfiguration()
 
         } catch {
             print("Error in lockForConfiguration()")
         }
 
         if isFlashOn {
-            backCamera.flashMode = AVCaptureFlashMode.On
+            backCamera?.flashMode = AVCaptureFlashMode.on
 
         } else {
-            backCamera.flashMode = AVCaptureFlashMode.Off
+            backCamera?.flashMode = AVCaptureFlashMode.off
         }
         
         // unlock your device
-        backCamera.unlockForConfiguration()
+        backCamera?.unlockForConfiguration()
     }
 
-    func setTorchOn(isTorchOn: Bool) {
+    func setTorchOn(_ isTorchOn: Bool) {
         // check if the device has torch
-        if backCamera.hasTorch {
+        if (backCamera?.hasTorch)! {
             do {
                 // lock your device for configuration
-                try backCamera.lockForConfiguration()
+                try backCamera?.lockForConfiguration()
 
             } catch {
                 print("Error in lockForConfiguration()")
@@ -148,31 +148,31 @@ class ErasingMemoryViewController: UIViewController {
             // check if your torchMode is on or off. If on turns it off otherwise turns it on
             if isTorchOn {
                 // sets the torch intensity to 100%
-                backCamera.torchMode = AVCaptureTorchMode.On
+                backCamera?.torchMode = AVCaptureTorchMode.on
 
                 do {
-                    try backCamera.setTorchModeOnWithLevel(1.0)
+                    try backCamera?.setTorchModeOnWithLevel(1.0)
 
                 } catch {
                     print("Error in setTorchModeOnWithLevel()")
                 }
 
             } else {
-                backCamera.torchMode = AVCaptureTorchMode.Off
+                backCamera?.torchMode = AVCaptureTorchMode.off
             }
 
             // unlock your device
-            backCamera.unlockForConfiguration()
+            backCamera?.unlockForConfiguration()
         }
     }
 
     func eraseMemory() {
-        if let videoConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
+        if let videoConnection = stillImageOutput!.connection(withMediaType: AVMediaTypeVideo) {
             self.audioPlayer.play()
 
-            videoConnection.videoOrientation = AVCaptureVideoOrientation.Portrait
+            videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
 
-            stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {(sampleBuffer, error) in
+            stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(sampleBuffer, error) in
                 if (sampleBuffer != nil) {
                     //let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                     //let dataProvider = CGDataProviderCreateWithCFData(imageData)
@@ -183,13 +183,13 @@ class ErasingMemoryViewController: UIViewController {
                     self.captureSession!.stopRunning()
                     self.setFlashOn(false)
                     self.setTorchOn(false)
-                    self.restoreButton.hidden = false
+                    self.restoreButton.isHidden = false
                 }
             })
         }
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //print("viewDidAppear")
     }
@@ -199,13 +199,13 @@ class ErasingMemoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "neuralisator" {
              audioPlayer.stop()
         }
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 
