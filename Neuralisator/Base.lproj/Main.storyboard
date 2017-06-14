@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,17 +20,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_neuralyzer.png" translatesAutoresizingMaskIntoConstraints="NO" id="QZi-sV-DdI">
-                                <rect key="frame" x="242.5" y="0.0" width="115" height="600"/>
+                                <rect key="frame" x="123.5" y="0.0" width="128" height="667"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QZi-sV-DdI" secondAttribute="height" multiplier="23:120" id="fXL-W0-k3D"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QZi-sV-DdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4L2-x8-kXn"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QZi-sV-DdI" secondAttribute="bottom" id="8wL-c9-u6o"/>
@@ -51,39 +55,35 @@
                         <viewControllerLayoutGuide type="bottom" id="XUg-WS-pPv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kzv-FX-XAM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAL-LP-WsX">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7u-QW-qDC">
-                                        <rect key="frame" x="153" y="548" width="294" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="Nfn-EU-kDf"/>
-                                            <constraint firstAttribute="width" constant="294" id="tip-vV-aD9"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
-                                        <state key="normal" title="You didn't see any flash " image="ic_back">
-                                            <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="neuralisator" modalTransitionStyle="flipHorizontal" id="koY-d2-Msu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="c7u-QW-qDC" secondAttribute="bottom" constant="19" id="3tq-3f-sKP"/>
-                                    <constraint firstItem="c7u-QW-qDC" firstAttribute="centerX" secondItem="xAL-LP-WsX" secondAttribute="centerX" id="oho-eQ-xTK"/>
-                                </constraints>
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7u-QW-qDC">
+                                <rect key="frame" x="40" y="614" width="294" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Nfn-EU-kDf"/>
+                                    <constraint firstAttribute="width" constant="294" id="tip-vV-aD9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" title="You didn't see any flash " image="ic_back">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="neuralisator" modalTransitionStyle="flipHorizontal" id="koY-d2-Msu"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xAL-LP-WsX" firstAttribute="leading" secondItem="Kzv-FX-XAM" secondAttribute="leadingMargin" constant="-20" id="1dk-pN-KXK"/>
+                            <constraint firstItem="XUg-WS-pPv" firstAttribute="top" secondItem="c7u-QW-qDC" secondAttribute="bottom" constant="20" id="DTD-vl-3kV"/>
                             <constraint firstItem="xAL-LP-WsX" firstAttribute="top" secondItem="Kzv-FX-XAM" secondAttribute="topMargin" id="GGc-yQ-foT"/>
+                            <constraint firstItem="c7u-QW-qDC" firstAttribute="centerX" secondItem="Kzv-FX-XAM" secondAttribute="centerX" id="NaW-5L-yAu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xAL-LP-WsX" secondAttribute="trailing" constant="-20" id="mZ7-tW-3gy"/>
                             <constraint firstItem="XUg-WS-pPv" firstAttribute="top" secondItem="xAL-LP-WsX" secondAttribute="bottom" id="wDK-f4-xSF"/>
                         </constraints>
